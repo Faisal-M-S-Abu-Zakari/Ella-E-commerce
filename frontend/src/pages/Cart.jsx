@@ -77,9 +77,7 @@ const Cart = () => {
                   alt={productData.name}
                 />
                 <div>
-                  <p className="font-medium text-sm text-lg">
-                    {productData.name}
-                  </p>
+                  <p className="font-medium text-sm">{productData.name}</p>
                   <div className="flex items-center gap-5 mt-2">
                     <p>
                       {currency}
