@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <div>
       <div className="pt-10 border-t text-2xl text-center">
-        <Title text1={"CONTACT"} text2={"US"} />
+        <Title text1={"CONTACT"} text2={"me"} />
       </div>
       <div className="flex md:flex-row flex-col justify-center gap-10 my-10 mb-28">
         <img
@@ -21,9 +21,9 @@ const Contact = () => {
             Istanbul, <br /> Türkiye
           </p>
           <p className="text-muted">
-            Tel: 123-458-3698
+            Tel: +90 534 259 48 19
             <br />
-            Email: Ella@gmail.com
+            Email: ellashahba@gmail.com
           </p>
           <p className="font-semibold text-gray-700 text-xl">
             CAREERS AT FOREVER

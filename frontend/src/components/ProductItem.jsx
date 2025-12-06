@@ -21,7 +21,7 @@ const ProductItem = ({ id, image, name, price }) => {
           <p className="mb-1 h-12 overflow-hidden font-medium text-text text-sm">
             {name}
           </p>
-          <p className="mt-3 font-semibold text-primary text-sm">
+          <p className="mt-3 font-semibold text-green-600 text-sm">
             {currency}
             {price}
           </p>

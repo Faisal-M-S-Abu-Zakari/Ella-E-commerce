@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div>
       <div className="pt-8 border-t text-2xl text-center">
-        <Title text1={"ABOUT"} text2={"US"} />
+        <Title text1={"ABOUT"} text2={"me"} />
       </div>
       <div className="flex md:flex-row flex-col gap-16 my-10">
         <img
@@ -31,7 +31,7 @@ const About = () => {
             care, sourced from trusted suppliers to ensure variety, comfort, and
             modern style — all gathered for you in one place.
           </p>
-          <b className="text-gray-800">Our Mission</b>
+          <b className="text-gray-800">my Mission</b>
           <p>
             My mission is to empower you with choice, convenience, and
             confidence. I’m committed to giving you a smooth, enjoyable shopping
