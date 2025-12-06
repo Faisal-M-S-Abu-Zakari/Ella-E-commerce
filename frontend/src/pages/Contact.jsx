@@ -4,42 +4,41 @@ import { assets } from "../assets/assets";
 import NewsLetterBox from "../components/NewsLetterBox";
 
 const Contact = () => {
-    return (
-        <div>
-            <div className="text-center text-2xl pt-10 border-t">
-                <Title text1={"CONTACT"} text2={"US"} />
-            </div>
-            <div className="my-10 flex flex-col justify-center md:flex-row gap-10 mb-28">
-                <img
-                    className="w-full md:max-w-[480px]"
-                    src={assets.contact_img}
-                    alt=""
-                />
-                <div className="flex flex-col justify-center items-start gap-6">
-                    <p className="font-semibold text-xl text-gray-600">
-                        OUR STORE
-                    </p>
-                    <p className="text-gray-500">
-                        Al-Rimal Neighborhood <br /> Gaza Strip, State of
-                        Palestine
-                    </p>
-                    <p className="text-gray-500">
-                        Tel: +972597661558
-                        <br />
-                        Email: ameerabudraz1@gmail.com
-                    </p>
-                    <p className="font-semibold text-xl text-gray-600">
-                        CAREERS AT FOREVER
-                    </p>
-                    <p className="text-gray-500">
-                        Learn more about our teams and job openings.
-                    </p>
-                    <button className="border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500">Explore Jobs</button>
-                </div>
+  return (
+    <div>
+      <div className="pt-10 border-t text-2xl text-center">
+        <Title text1={"CONTACT"} text2={"US"} />
+      </div>
+      <div className="flex md:flex-row flex-col justify-center gap-10 my-10 mb-28">
+        <img
+          className="w-full md:max-w-[480px]"
+          src={assets.contact_img}
+          alt=""
+        />
+        <div className="flex flex-col justify-center items-start gap-6">
+          <p className="font-semibold text-gray-700 text-xl">OUR STORE</p>
+          <p className="text-muted">
+            Istanbul, <br /> Türkiye
+          </p>
+          <p className="text-muted">
+            Tel: 123-458-3698
+            <br />
+            Email: Ella@gmail.com
+          </p>
+          <p className="font-semibold text-gray-700 text-xl">
+            CAREERS AT FOREVER
+          </p>
+          <p className="text-muted">
+            Learn more about my teams and job openings.
+          </p>
+          <button className="hover:bg-primary px-8 py-4 border border-border hover:text-white text-sm transition-all duration-500">
+            Explore Jobs
+          </button>
         </div>
-        <NewsLetterBox />
-        </div>
-    );
+      </div>
+      <NewsLetterBox />
+    </div>
+  );
 };
 
 export default Contact;
