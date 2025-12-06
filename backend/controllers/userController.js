@@ -144,4 +144,57 @@ const uploadAvatar = async (req, res) => {
   }
 };
 
-export { loginUser, registerUser, adminLogin, getProfile, uploadAvatar };
+// Get admin profile (return from env)
+const getAdminProfile = async (req, res) => {
+  try {
+    const adminEmail = process.env.ADMIN_EMAIL;
+
+    res.json({
+      success: true,
+      admin: {
+        email: adminEmail,
+        name: "Administrator",
+        avatar: "",
+      },
+    });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: error.message });
+  }
+};
+
+// Upload admin avatar (store in session/return URL only)
+const uploadAdminAvatar = async (req, res) => {
+  try {
+    if (!req.file)
+      return res.json({ success: false, message: "No file uploaded" });
+
+    // upload to cloudinary
+    const result = await cloudinary.uploader.upload(req.file.path, {
+      resource_type: "image",
+      folder: "admin/avatars",
+    });
+
+    // remove local file
+    try {
+      fs.unlinkSync(req.file.path);
+    } catch (e) {
+      // ignore
+    }
+
+    res.json({ success: true, avatar: result.secure_url });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: error.message });
+  }
+};
+
+export {
+  loginUser,
+  registerUser,
+  adminLogin,
+  getProfile,
+  uploadAvatar,
+  getAdminProfile,
+  uploadAdminAvatar,
+};
