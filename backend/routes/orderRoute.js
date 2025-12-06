@@ -2,13 +2,12 @@ import express from "express";
 import adminAuth from "./../middleware/adminAuth.js";
 import authUser from "../middleware/auth.js";
 import {
-    PlaceOrder,
-    PlaceOrderStripe,
-    PlaceOrderPaypal,
-    allOrders,
-    userOrders,
-    updateStatus,
-    verifyStripe,
+  PlaceOrder,
+  PlaceOrderStripe,
+  allOrders,
+  userOrders,
+  updateStatus,
+  verifyStripe,
 } from "../controllers/orderController.js";
 
 const orderRouter = express.Router();
@@ -20,11 +19,9 @@ orderRouter.post("/status", adminAuth, updateStatus);
 // Payment Features
 orderRouter.post("/place", authUser, PlaceOrder);
 orderRouter.post("/stripe", authUser, PlaceOrderStripe);
-orderRouter.post("/paypal", authUser, PlaceOrderPaypal);
 
 // User Features
 orderRouter.post("/userorders", authUser, userOrders);
-
 
 // verify payment
 orderRouter.post("/verifyStripe", authUser, verifyStripe);
